@@ -7,11 +7,11 @@ const initialState = {
   error: null,
 };
 
-const backend_url = process.env.BACKEND_URL;
+const backendUrl = process.env.BACKEND_URL;
 
 export const userSignup = createAsyncThunk('user/signup', async (name) => {
   try {
-    const response = await axios.post(`${backend_url}/api/users`, {
+    const response = await axios.post(`${backendUrl}/api/users`, {
       user: {
         name,
       },
@@ -24,7 +24,7 @@ export const userSignup = createAsyncThunk('user/signup', async (name) => {
 
 export const userLogin = createAsyncThunk('user/userLogin', async (name) => {
   try {
-    const response = await axios.post(`${backend_url}/api/users/login`, { name });
+    const response = await axios.post(`${backendUrl}/api/users/login`, { name });
     return response.data;
   } catch (error) {
     throw new Error('Failed to Login up. No user Found!');
