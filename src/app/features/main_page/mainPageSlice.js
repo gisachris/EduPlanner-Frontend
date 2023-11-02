@@ -2,9 +2,11 @@
 
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
+const backendUrl = process.env.BACKEND_URL;
+
 export const fetchMainPage = createAsyncThunk('mainPage/fetch', async () => {
   try {
-    const response = await fetch('https://edu-planner-backend.onrender.com/api/courses');
+    const response = await fetch(`${backendUrl}/api/courses`);
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }

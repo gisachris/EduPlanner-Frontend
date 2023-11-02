@@ -6,6 +6,8 @@ const initialState = {
   error: null,
 };
 
+const backendUrl = process.env.BACKEND_URL;
+
 export const createCourse = createAsyncThunk('courseForm/create', async (courseData) => {
   const formData = new FormData();
   formData.append('course[name]', courseData.name);
@@ -14,7 +16,7 @@ export const createCourse = createAsyncThunk('courseForm/create', async (courseD
   formData.append('course[startDate]', courseData.startDate);
   formData.append('course[image]', courseData.image);
 
-  const response = await fetch('https://edu-planner-backend.onrender.com/api/courses', {
+  const response = await fetch(`${backendUrl}/api/courses`, {
     method: 'POST',
     body: formData,
   });
