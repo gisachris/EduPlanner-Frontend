@@ -4,7 +4,7 @@
 
 | Project View Page                                                                                                       |
 | ----------------------------------------------------------------------------------------------------------------------- |
-| <div align="center" width="auto"><img alt="Finance-Tracker login" src="src/assets/images/project_image_app.png"/></div> |
+| <div align="center" width="auto"><img alt="Finance-Tracker login" src="src/assets/images/eduplannerView.png"/></div> |
 
 <a name="readme-top"></a>
 
@@ -86,7 +86,7 @@
 
 ## 🔗 Back End Link <a name="documentation"></a>
 
-- [EduPlanner Backend](https://github.com/ab-noori/EduPlanner-Backend)
+- [EduPlanner Backend](https://github.com/gisachris/EduPlanner-Backend)
 
   > _Our backend code is stored in a separate repository and is built using ruby on rails. The backend is responsible for processing data and handling API requests from the frontend. To access our backend code, please click on the provided link below._
 
